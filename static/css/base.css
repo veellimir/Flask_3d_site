@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+.layer-all {
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateZ(120);
+}
+.layer-2 {
+    background-image: url(../assets/1.png);
+    transform: translateZ(80px);
+}
+
+/* logo */
+.layer-3 {
+    width: 250px;
+    height: 250px;
+    margin-left: 20%;
+    margin-top: 15%;
+    transform: translateZ(180px);
+}
+.layer-4 {
+    background-image: url(../assets/layer-5.png);
+    transform: translateZ(20px);
+}
+.layer-4-1 ,.layer-4-2 {
+    width: 472.65px; 
+    height: 511.054px; 
+    margin-top: 50vh;
+    transform: translateZ(150px);
+}
+.layer-4-1 {
+    background-image: url(../assets/Ellipse28.png);
+    margin-left: 0%;
+}
+.layer-4-2 {
+    background-image: url(../assets/Ellipse29.png);
+    margin-left: 90%;
+}
+.layer-5 {transform: translateZ(720px);}
+.layers {perspective: 1300px; overflow: hidden;}
+.layers__container {
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+    will-change: transform;
+    transition: transform var(--transition);
+}
+.layers__item,.btn-btn,#pink,.slider_bg,#blue,.reviews,.title-comment {position: absolute;}
+.layers__item {
+    inset: -10vw;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+/* end block 3d */
+
+:root {
+    --transition: 1s cubic-bezier(0.50, .5, 0, 1);
+    --dark: #070707;
+    --dynamic_size_fonts: calc(1vw + 1vw);
+    --trans_slid: .75s cubic-bezier(.2, .6, 0, 1)
+}

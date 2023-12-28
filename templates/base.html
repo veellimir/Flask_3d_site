@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block mystyle %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mainimage.css') }}">
+    {% endblock %}
+
+    {% block title %}
+    <title>{{ title }}</title>
+    {% endblock %}
+</head>
+<body>
+    <section class="layers">
+        <div class="layers__container">
+            <div class="layers__item layer-all layer-1" style="z-index: -20;"></div>
+            <div class="layers__item layer-4"></div>
+            <div class="layers__item layer-4-1"></div>
+            <div class="layers__item layer-4-2"></div>
+            <div class="layers__item layer-2">
+                <div class="title">
+                    <h4>LOWER <br> FLOWER </h4>
+                    <h2>Создаём для тех, кто ценит свежесть и изящество цветка</h2>
+                </div>
+            </div>
+            <div class="layers__item layer-5">
+                <canvas class="rain"></canvas>
+            </div>
+        </div>       
+    </section> 
+
+
+{% block main %}
+{% endblock %}
+
+<script src="{{ url_for('static', filename='js/rain.js') }}"></script>
+</body>
+</html>
