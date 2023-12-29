@@ -1,8 +1,8 @@
 let canvas = document.getElementsByClassName('rain')[0];
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight,
 
-let c = canvas.getContext('2d');
+ 	c = canvas.getContext('2d');
 
 function randomNum(max, min) {
 	return Math.floor(Math.random() * max) + min;
@@ -25,6 +25,7 @@ function RainDrops(x, y, endy, velocity, opacity) {
 	}
 	this.update = function() {
 		let rainEnd = window.innerHeight + 100;
+		
 		if (this.y >= rainEnd) {
 			this.y = this.endy - 100;
 		} else {
@@ -37,11 +38,11 @@ function RainDrops(x, y, endy, velocity, opacity) {
 let rainArray = [];
 
 for (let i = 0; i < 140; i++) {
-	let rainXLocation = Math.floor(Math.random() * window.innerWidth) + 1;
-	let rainYLocation = Math.random() * -500;
-	let randomRainHeight = randomNum(10, 2);
-	let randomSpeed = randomNum(20, .2);
-	let randomOpacity = Math.random() * .55;
+	let rainXLocation = Math.floor(Math.random() * window.innerWidth) + 1,
+	 	rainYLocation = Math.random() * -500,
+	 	randomRainHeight = randomNum(10, 2),
+	 	randomSpeed = randomNum(20, .2),
+	 	randomOpacity = Math.random() * .55;
 	rainArray.push(new RainDrops(rainXLocation, rainYLocation, randomRainHeight, randomSpeed, randomOpacity));
 }
 
