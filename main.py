@@ -21,5 +21,10 @@ def catalog():
     return render_template('catalog.html', title='Каталог', head_menu=head_menu)
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html', title='О нас', head_menu=head_menu)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

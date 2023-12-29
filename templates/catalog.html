@@ -2,7 +2,10 @@
 
 
 {% block mystyle %}
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/catalog.css') }}">
 {% endblock %}
 
+{% block title %}<title>{{ title }}</title>{% endblock %}
 
+
+{% block button_select %}<a href=""><button class="btn-catalog">главная</button></a>{% endblock %}
