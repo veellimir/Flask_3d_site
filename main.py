@@ -13,7 +13,7 @@ head_menu = [
 @app.route('/')
 @app.route('/index')
 def main():
-    return render_template('base.html', title='Главная', head_menu=head_menu)
+    return render_template('index.html', title='Главная', head_menu=head_menu)
 
 
 @app.route('/catalog')
