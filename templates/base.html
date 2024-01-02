@@ -6,10 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet">
-
-    {% block mystyle %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/mainimage.css') }}">
-    {% endblock %}
+    {% block mystyle %}{% endblock %}
 
     {% block title %}<title>{{ title }}</title>{% endblock %}
 </head>
@@ -65,12 +62,13 @@
     <div class="wrapper_basket"></div>
     <div class="modal_basket"></div>
     
-{% block main %}
+<main>
+{% block main %}{% endblock %}
+</main>
 
-
-
-{% endblock %}
 <script src="{{ url_for('static', filename='js/myCanvas.js') }}"></script>
 <script src="{{ url_for('static', filename='js/basket.js') }}"></script>
+
+{% block script %}{% endblock %}
 </body>
 </html>

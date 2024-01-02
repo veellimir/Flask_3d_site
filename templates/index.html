@@ -1,6 +1,73 @@
 {% extends 'base.html' %}
 
+{% block mystyle %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
 
+{% block main %}
+<div class="wrapper_slider">
+    <div class="destination_slider">
+        <h2>ПОПУЛЯРНЫЕ БУКЕТЫ</h2>
+        <p>
+            У НАС САМЫЙ БОЛЬШОЙ ВЫБОР ЦВЕТОВ, БУКЕТОВ,
+            ОТКРЫТОК И ПОДАРКОВ. МЫ ВСЕГДА ПОМОЖЕМ ВАМ
+            ПОДОБРАТЬ БУКЕТ ДЛЯ ВАШЕГО СОБЫТИЯ,
+            НАШ МЕНЕДЖЕР ВАС ПРОКОНСУЛЬТИРУЕТ И
+            ПОМОЖЕТ ОПРЕДЕЛИТЬСЯ С ВЫБОРОМ
+        </p>
+    </div>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide--one">
+            <span>domestic</span>
+            <div>
+              <h2>Enjoy the exotic of sunny Hawaii</h2>
+              <p>Maui, Hawaii</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--two">
+            <span>subtropical</span>
+            <div>
+              <h2>The Island of Eternal Spring</h2>
+              <p>Lanzarote, Spanien</p>
+            </div>
+          </div>
+    
+          <div class="swiper-slide swiper-slide--three">
+            <span>history</span>
+            <div>
+              <h2>Awesome Eiffel Tower</h2>
+              <p>Paris, France</p>
+            </div>
+          </div>
+    
+          <div class="swiper-slide swiper-slide--four">
+            <span>Mayans</span>
+            <div>
+              <h2>One of the safest states in Mexico</h2>
+              <p>The Yucatan, Mexico</p>
+            </div>
+          </div>
+    
+          <div class="swiper-slide swiper-slide--five">
+            <span>native</span>
+            <div>
+              <h2>The most popular yachting destination</h2>
+              <p>Whitsunday Islands, Australia</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+</div>
+    
 
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/slider-index.js') }}"></script>
+{% endblock %}
 
 

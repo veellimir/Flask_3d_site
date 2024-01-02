@@ -7,14 +7,24 @@
     text-decoration: none;
     border: none;
 }
-button {cursor: pointer;}
 
 :root {
     --transition: 1s cubic-bezier(2.50, .5, 0, 1);
-    --dark: #070707;
     --dynamic_size_fonts: calc(1vw + 1vw);
-    --trans_slid: .25s cubic-bezier(.2, .6, 0, 1)
+    --trans_slid: .25s cubic-bezier(.2, .6, 0, 1);
+    
+    --dark: #070707;
+    --white: #fff;
+    --neon_green: #43FFD2;
+    --neon_pink: #7D2253;
+
+    --f_oswald: 'Oswald';
+    --f_cormorant: 'Cormorant';
 }
+
+body{background: var(--dark); overflow-x: hidden;}
+
+button {cursor: pointer;}
 
 .layer-all {
     background-repeat: no-repeat;
@@ -34,6 +44,8 @@ button {cursor: pointer;}
     margin-top: 15%;
     transform: translateZ(180px);
 }
+svg {cursor: pointer;}
+
 .layer-4 {
     background-image: url(../assets/layer-5.png);
     transform: translateZ(20px);
@@ -70,7 +82,6 @@ button {cursor: pointer;}
 }
 /* end block 3d */
 
-/* Header */
 header {
     position: absolute; 
     z-index: 1;
@@ -84,37 +95,36 @@ header {
     height: 100px;
 }
 li a {
-    color: #fff; 
+    color: var(--white); 
     transition-duration: 1s;
-    font-family: 'Oswald';
+    font-family: var(--f_oswald);
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 0.56px;
     text-transform: uppercase;
 }
-li a:hover {color: #43FFD2;}
+li a:hover {color: var(--neon_green);}
 
 .logo { width: 34px; height: 75px; }
 
 .title {
-    position: relative;
-    top: 30%;
+    margin-top: 400px;
     text-align: center;
 }
 .title h1, .title span{
-    color: #FFF;
+    color: var(--white);
     font-style: normal;
     line-height: normal;
     text-transform: uppercase;
 } 
 .title h1 {
-    font-family: 'Cormorant';
+    font-family: var(--f_cormorant);
     font-size: 20vh;
     font-weight: 300;
     letter-spacing: 40px;
 }
 .title span {
-    font-family: 'Oswald';
+    font-family: var(--f_oswald);
     font-size: 2vh;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -125,10 +135,10 @@ li a:hover {color: #43FFD2;}
 .btn-catalog {
     width: 220px;
     height: 50px;
-    background: #43FFD2;
+    background: var(--neon_green);
     margin-top: 50px;
-    color: #000;
-    font-family: 'Oswald';
+    color: var(--dark);
+    font-family: var(--f_oswald);
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -137,8 +147,8 @@ li a:hover {color: #43FFD2;}
     text-transform: uppercase;
 }
 .btn-catalog:hover {
-    background-color: #7D2253;
-    color: #fff; 
+    background-color: var(--neon_pink);
+    color: var(--white); 
     transition-duration: 1s;
 }
 
@@ -155,7 +165,7 @@ li a:hover {color: #43FFD2;}
     top: 0;
     height: 100%;
     transition: all 1s ease; animation-fill-mode: forwards;
-    visibility: hidden;
+    display: none;
 }
 .wrapper_basket {
     background: rgba(251, 251, 251, 0.645);
@@ -172,5 +182,5 @@ li a:hover {color: #43FFD2;}
     background: #000000;
     z-index: 3;
 }
-.wrapper_basket_active {visibility: visible; left: 0;}
-.modal_basket_active {visibility: visible; right: 0;}
+.wrapper_basket_active {display: block; left: 0;}
+.modal_basket_active {display: block; right: 0;}
