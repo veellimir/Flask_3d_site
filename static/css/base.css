@@ -94,6 +94,15 @@ header {
     align-items: center;
     height: 100px;
 }
+.active_header {
+    position: fixed;
+    left: 0;
+    background-color: #1c1d1d;
+    width: 100%;
+    animation-name: header-active;
+    transition-duration: all .2s;
+}
+
 li a {
     color: var(--white); 
     transition-duration: 1s;
@@ -184,3 +193,19 @@ li a:hover {color: var(--neon_green);}
 }
 .wrapper_basket_active {display: block; left: 0;}
 .modal_basket_active {display: block; right: 0;}
+
+/* footer */
+footer {
+    height: 200px;
+    margin-top: 50px;
+}
+
+
+/* media */
+footer {
+    position: relative;
+    max-width: 2300px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
