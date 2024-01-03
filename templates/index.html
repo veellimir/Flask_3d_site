@@ -33,7 +33,6 @@
               <p>Lanzarote, Spanien</p>
             </div>
           </div>
-    
           <div class="swiper-slide swiper-slide--three">
             <span>history</span>
             <div>
@@ -41,7 +40,6 @@
               <p>Paris, France</p>
             </div>
           </div>
-    
           <div class="swiper-slide swiper-slide--four">
             <span>Mayans</span>
             <div>
@@ -49,7 +47,6 @@
               <p>The Yucatan, Mexico</p>
             </div>
           </div>
-    
           <div class="swiper-slide swiper-slide--five">
             <span>native</span>
             <div>
@@ -61,13 +58,43 @@
         <div class="swiper-pagination"></div>
       </div>
 </div>
-    
-
+<div class="container-reviews">
+  <div class="tree"></div>
+  <div class="pink"></div>
+  <div class="blue"></div>
+  <div class="text-comm">Оставьте <br> комментарий</div>
+  <div class="reviews">
+      <div class="title-comment"><p>Вы можете Оставить комментарий к данному сайту, это поможет мне учесть недочёты и сделать работу лучше</p></div>
+      <form action="" class="form">
+          <input type="text" class="input-input group name" id="inpFeedback" placeholder="Ваше Имя" required>
+          <input type="email" class="input-input group email" id="inpFeedback" placeholder="Ваш почтовый адрес" required>
+          <textarea cols="30" rows="10" class="input-input comment" id="inpFeedback" placeholder="Ваш комментарий к сайту" required></textarea>
+          <button class="blue_btn btn-push">отправить отзыв</button>
+          <div class="sms_push">
+              <span>Ваш комментарий <br> отправлен</span><br>
+              <h3>Спасибо за обратную связь !</h3>
+          </div>
+      </form>
+  </div>
+</div>
+<div class="wrapper_reviews">
+    <div class="content_reviews">
+      <img src="{{ url_for('static', filename='assets/Rectangle44.png') }}" alt="Ошибка изображения">
+      <img src="{{ url_for('static', filename='assets/Rectangle45.png') }}" alt="Ошибка изображения">
+      <img src="{{ url_for('static', filename='assets/Rectangle46.png') }}" alt="Ошибка изображения">
+      <img src="{{ url_for('static', filename='assets/Rectangle47.png') }}" alt="Ошибка изображения">
+    </div>
+    <div class="signature">
+        <h4>Our social <br> networks</h4>
+        <div class="neon_green"></div>
+    </div>
+</div>
 {% endblock %}
 
 {% block script %}
 <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/slider-index.js') }}"></script>
+<script src="{{ url_for('static', filename='js/feedback.js') }}"></script>
 {% endblock %}
 
 
