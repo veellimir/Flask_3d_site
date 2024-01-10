@@ -1,9 +1,11 @@
-from flask import Flask, render_template, g
+from flask import Flask, render_template, g, request
 
 from HeaderDataBase import HeaderDB
+from ValidationPostForm import validation_form
 
 import sqlite3
 import os
+
 
 DATA_BASE = 'data_base.db'
 DEBUG = True
@@ -32,10 +34,13 @@ def close_connect_db(error):
         g.link_db.close()
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def main():
     db = get_db()
     dbase = HeaderDB(db)
+    if request.method == 'POST':
+        validation_form()
+        return render_template('index.html', title='Главная', head_menu=dbase.get_menu())
     return render_template('index.html', title='Главная', head_menu=dbase.get_menu())
 
 
@@ -51,6 +56,11 @@ def about():
     db = get_db()
     dbase = HeaderDB(db)
     return render_template('about.html', title='О нас', head_menu=dbase.get_menu())
+
+
+@app.route('/signin')
+def signin():
+    return render_template('signin.html', title='Войти', head_menu=[])
 
 
 @app.errorhandler(404)
