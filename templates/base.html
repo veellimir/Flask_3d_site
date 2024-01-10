@@ -20,7 +20,7 @@
                     </svg>
                 </div> 
                 <img src="{{ url_for('static', filename='assets/logo.png') }}" class="logo" alt="logo">
-                {% for l in head_menu %}<li><a href="{{ l.url }}">{{ l.name }}</a></li>{% endfor %}
+                {% for l in head_menu %}<li><a href="{{ l.url }}">{{ l.title }}</a></li>{% endfor %}
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="154" viewBox="0 0 60 154" fill="none" class="social">
                     <g filter="url(#filter0_b_1_37)">
                       <rect width="60" height="154" rx="10" fill="black" fill-opacity="0.2"/>

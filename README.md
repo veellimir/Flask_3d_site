@@ -3,6 +3,7 @@
 ### Stack:
     Flask;
     Python 3.10;
+    Sql3;
 
     Js;
     Html;
