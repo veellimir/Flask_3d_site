@@ -45,6 +45,9 @@ button {cursor: pointer;}
     transform: translateZ(180px);
 }
 svg {cursor: pointer;}
+svg:hover {width: 70px;}
+
+
 
 .layer-4 {
     background-image: url(../assets/layer-5.png);
@@ -170,11 +173,10 @@ li a:hover {color: var(--neon_green);}
     cursor: pointer;
 }
 .wrapper_basket,.modal_basket {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
     transition: all 1s ease; animation-fill-mode: forwards;
-    display: none;
 }
 .wrapper_basket {
     background: rgba(251, 251, 251, 0.645);
@@ -191,6 +193,27 @@ li a:hover {color: var(--neon_green);}
     background: #000000;
     z-index: 3;
 }
+.modal_basket h4 {
+    color: var(--neon_green);
+    font-family: var(--f_oswald);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 30px;
+    padding: 20px;
+    border-bottom: 1px solid var(--white);
+}
+.modal_basket h5 {
+    color: var(--white);
+    font-family: var(--f_cormorant);
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin: 60px auto;
+}
+
 .wrapper_basket_active {display: block; left: 0;}
 .modal_basket_active {display: block; right: 0;}
 
@@ -207,5 +230,4 @@ footer {
     max-width: 2300px;
     left: 50%;
     transform: translate(-50%);
-    display: flex;
 }

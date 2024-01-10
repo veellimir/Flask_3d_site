@@ -26,5 +26,10 @@ def about():
     return render_template('about.html', title='О нас', head_menu=head_menu)
 
 
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('notFound.html', title='Страница не найдена', head_menu=head_menu)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
