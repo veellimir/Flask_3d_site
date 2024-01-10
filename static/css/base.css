@@ -22,7 +22,8 @@
     --f_cormorant: 'Cormorant';
 }
 
-body{background: var(--dark); overflow-x: hidden;}
+
+body{background: var(--dark); }
 
 button {cursor: pointer;}
 
