@@ -224,12 +224,11 @@ form {display: flex; flex-direction: column; margin-top: 200px;}
   border-color: rgb(74, 3, 3);
   box-shadow: 0px 0px 40px 0px rgba(255, 0, 0, 0.20);
 }
-.sms_push {display: none;}
+.sms_push {display: none; position: fixed;}
 .sms_push_active {
   width: 60vh;
   height: 30vh;
   background-color: #395959;
-  position: fixed;
   left: 50%; transform: translate(-50%);
   text-align: center;
   display: flex;
