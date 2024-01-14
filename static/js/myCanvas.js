@@ -1,4 +1,4 @@
-let canvas = document.getElementsByClassName('rain')[0];
+let canvas = document.getElementsByClassName('rain')[0]
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight,
 

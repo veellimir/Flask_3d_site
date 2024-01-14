@@ -1,28 +1,9 @@
-let form = document.querySelector('.form'),
-    inputMain = document.querySelectorAll('#inpFeedback');
+const success = document.querySelector('.success');
 
-form.onsubmit = function (event) {
-    event.preventDefault();
-    let emptyInputs = false;
-
-    inputMain.forEach(function (input) {
-        if (input.value.trim() === '') {
-            input.classList.add('inputErorr');
-            emptyInputs = true; 
-        } else {
-            input.classList.remove('inputErorr');
-        }
-    });
-
-    if (emptyInputs) {
-        return
+function closeSuccess() {
+    if (success) {
+        success.style.opacity = 0;
     }
-    let smsPush = document.querySelector('.sms_push');
-    smsPush.classList.add('sms_push_active');
-    
-
-    setTimeout(function() {
-        form.submit();
-    }, 2300);
-
 };
+
+setTimeout( () => {closeSuccess();}, 2000);
