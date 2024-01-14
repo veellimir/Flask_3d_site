@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <title>Панель администратора</title>
+</head>
+<body>
+    <h1>Панель администратора</h1>
+    <h2>Добавление товара</h2>
+    <form class="wrapper-add_card" action="{{ url_for('admin') }}" method="post">
+        <p>Img <input type="text" name="images" required></p>
+        <p>Наиминование: <input type="text" name="name" required></p>
+        <p>Описание:</p><textarea cols="30" rows="10" name="title" required></textarea>
+        <p>Цена: <input type="number" name="price" required> Рублей</p>
+        <p><input type="submit" value="Добавить"></p>
+    </form>
+</body>
+</html>
