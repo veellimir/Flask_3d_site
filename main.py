@@ -44,11 +44,12 @@ def main():
     return render_template('index.html', title='Главная', head_menu=dbase.get_menu())
 
 
-@app.route('/catalog')
+@app.route('/catalog', methods=['POST', 'GET'])
 def catalog():
     db = get_db()
     dbase = HeaderDB(db)
-    return render_template('catalog.html', title='Каталог', head_menu=dbase.get_menu())
+    return render_template('catalog.html', title='Каталог',
+                           head_menu=dbase.get_menu(), cards=dbase.get_card_anons())
 
 
 @app.route('/about')
@@ -61,6 +62,21 @@ def about():
 @app.route('/signin')
 def signin():
     return render_template('signin.html', title='Войти', head_menu=[])
+
+
+@app.route('/admin', methods=['POST', 'GET'])
+def admin():
+    db = get_db()
+    dbase = HeaderDB(db)
+
+    if request.method == 'POST':
+        if len(request.form['images']) > 4 and len(request.form['name']) > 4:
+            res = dbase.add_admin_card(
+                request.form['images'], request.form['name'], request.form['title'], request.form['price'])
+            if not res:
+                return False
+            return True
+    return render_template('admin.html', title='Панель администратора', head_menu=dbase.get_menu())
 
 
 @app.errorhandler(404)

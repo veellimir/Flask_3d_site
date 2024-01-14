@@ -1,3 +1,22 @@
-.layer-1 {
-    background-image: url(../assets/catalog.jpg); 
+.layer-1 {background-image: url(../assets/catalog.jpg);}
+
+
+.wrapper-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 60%;
+    margin: 30px auto;
+    background-color: aqua;
+}
+.article-card {
+    width: 300px;
+    height: 400px;
+    background: var(--white);
+    padding: 30px;
+    cursor: pointer;
+    margin: 30px 10px;
+}
+.wrapper-card h4 {
+  
 }
